@@ -9,6 +9,7 @@ if [ $HOST -gt 1 ] && [ $HOST -lt 255 ]; then
     sudo mv ./00-installer-config.yaml /etc/netplan/ &&\
     sudo netplan apply &&\
     echo "IP Set Successfully!!!" &&\
+    sleep 10
     ip address # show current ip address
 else
     echo "You enter wrong host number"
