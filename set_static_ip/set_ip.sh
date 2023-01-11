@@ -10,7 +10,9 @@ if [ $HOST -gt 1 ] && [ $HOST -lt 255 ]; then
     sudo netplan apply &&\
     echo "IP Set Successfully!!!" &&\
     sleep 3
-    ip address # show current ip address
+    ip address &&\
+    sudo apt update &&\
+    sudo apt install openssh-server
 else
     echo "You enter wrong host number"
 fi
